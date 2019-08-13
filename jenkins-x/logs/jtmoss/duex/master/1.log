@@ -1,0 +1,44 @@
+Step: step-credential-initializer-494rj:
+
+{"level":"warn","ts":1565719146.795725,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565719146.7962008,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-dqbcf:
+
+{"level":"warn","ts":1565719147.164218,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565719147.1654801,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-jtmoss-duex-master-fddl7:
+
+{"level":"warn","ts":1565719153.6015098,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565719154.2311423,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/jtmoss/duex.git @ 81d46af7485349ab39a873a0dd4e076ae02ca04e in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:81d46af7485349ab39a873a0dd4e076ae02ca04e","time":"2019-08-13T17:59:14Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-13T17:59:14Z"}
+Step: step-merge-pull-refs:
+
+SKIP merge-pull-refs: Nothing to merge
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-13T17:59:16Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions","time":"2019-08-13T17:59:16Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-effective.yml","time":"2019-08-13T17:59:17Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"running command: echo \\$(jx-release-version) \u003e VERSION","time":"2019-08-13T17:59:18Z"}
+{"level":"info","msg":"","time":"2019-08-13T17:59:18Z"}
+{"level":"info","msg":"running command: jx step tag --version \\$(cat VERSION)","time":"2019-08-13T17:59:18Z"}
+{"level":"info","msg":"Updating chart version in charts/duex/Chart.yaml to 0.0.1","time":"2019-08-13T17:59:18Z"}
+{"level":"info","msg":"Updating repository in charts/duex/values.yaml to 10.27.249.112:5000/jtmoss/duex","time":"2019-08-13T17:59:18Z"}
+{"level":"info","msg":"Updating tag in charts/duex/values.yaml to 0.0.1","time":"2019-08-13T17:59:18Z"}
+{"level":"info","msg":"Tag v0.0.1 created and pushed to remote origin","time":"2019-08-13T17:59:21Z"}
+{"level":"info","msg":"","time":"2019-08-13T17:59:21Z"}
+{"level":"warning","msg":"failed to find secret kaniko-secret in namespace *********: secrets \"kaniko-secret\" not found","time":"2019-08-13T17:59:21Z"}
+{"level":"info","msg":"PipelineActivity for jtmoss-duex-master-1","time":"2019-08-13T17:59:21Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-13T17:59:21Z"}
+{"level":"info","msg":"upserted PipelineResource jtmoss-duex-master for the git repository https://github.com/jtmoss/duex.git and branch master","time":"2019-08-13T17:59:21Z"}
+{"level":"info","msg":"upserted Task jtmoss-duex-master-from-build-pack-1","time":"2019-08-13T17:59:21Z"}
+{"level":"info","msg":"upserted Pipeline jtmoss-duex-master-1","time":"2019-08-13T17:59:21Z"}
+{"level":"info","msg":"created PipelineRun jtmoss-duex-master-1","time":"2019-08-13T17:59:21Z"}
+{"level":"info","msg":"created PipelineStructure jtmoss-duex-master-1","time":"2019-08-13T17:59:21Z"}
